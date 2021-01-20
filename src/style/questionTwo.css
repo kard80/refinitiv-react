@@ -1,0 +1,18 @@
+.questionTwo {
+    width: 100%;
+    min-height: 30%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.questionTwo input {
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+.questionTwo table {
+    border: 1px solid black;
+}

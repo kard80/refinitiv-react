@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { useState } from 'react'
 import './App.css';
+import QuestionOne from './components/QuestionOne'
+import QuestionTwo from './components/QuestionTwo'
 
 function App() {
+  const [questionNumber, setQuestionNumber] = useState(2)
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <nav>
+        <ul>
+          <li onClick={() => setQuestionNumber(1)}>Question 1</li>
+          <li onClick={() => setQuestionNumber(2)}>Question 2</li>
+        </ul>
+      </nav>
+      <div className="body">
+      {questionNumber === 1 ? <QuestionOne /> : null}
+      {questionNumber === 2 ? <QuestionTwo /> : null}
+      </div>
+    </div >
   );
 }
 
